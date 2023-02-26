@@ -34,14 +34,14 @@
     src: url('../fonts/roboto-v30-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
     url('../fonts/roboto-v30-latin-700.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-/* roboto-900 - latin */
+/* prompt-900 - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 900;
-    src: url('../fonts/roboto-v30-latin-900.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
-    url('../fonts/roboto-v30-latin-900.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/prompt-v10-latin-900.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('../fonts/prompt-v10-latin-900.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 :root{
@@ -51,3 +51,183 @@
     --main-subtext-color: #aaa;
     --line-color: #d3e6f4;
 }
+
+html{
+    box-sizing: border-box;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.container{
+    width: 100%;
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 35px;
+    padding-left: 35px;
+}
+
+ol,
+ul{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* ***************** TICKET SECTION STYLE STARTS****************** */
+
+.ticket-section{
+    margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--main-bg-color);
+    width: 450px;
+    height: 500px;
+    border-radius: 5px;
+}
+
+.ticket_destination{
+    position: relative;
+    margin-bottom: 65px;
+}
+
+.ticket-destination__list{
+    padding-top: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cityabr{
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-family: "Prompt";
+    line-height: 60px;
+    font-weight: 900;
+    font-size: 70px;
+    color: var(--destination-text-color);
+}
+
+.cityname{
+    margin-top: 0;
+    font-weight: 500;
+    color: var(--main-subtext-color);
+}
+
+.cityname1::before{
+    position: absolute;
+    display: block;
+    content: "";
+    top: 100px;
+    left: 170px;
+    width: 30px;
+    height: 5px;
+    background-color: #d3e6f4;
+}
+
+.cityname1{
+    text-align: end;
+    margin-top: 0;
+    font-weight: 500;
+    color: var(--main-subtext-color);
+}
+
+
+.ticket-section__list{
+    display: flex;
+}
+
+.ticket-section__item:not(:last-child){
+    margin-right: 100px;
+}
+
+.ticket-section__seatinfo{
+    margin-top: 0;
+    margin-bottom: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--main-subtext-color);
+}
+
+.ticket-section__seatnum{
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--main-text-color);
+}
+
+
+.ticket-destination_passenger{
+    display: flex;
+    align-items: start;
+}
+
+.passenger__list{
+    margin-right: 115px;
+}
+
+.passenger__item{
+    margin-top: 0;
+}
+
+.passenger_info{
+    margin-top: 0;
+    margin-bottom: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--main-subtext-color);
+}
+
+.passenger_name{
+    margin-top: 0;
+    margin-bottom: 30;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--main-text-color);
+}
+
+/* ***************** TICKET SECTION STYLE ENDS******************** */
+
+
